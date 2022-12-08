@@ -1,0 +1,26 @@
+logging:
+  level:
+    root: INFO
+
+#------spring
+spring:
+  application:
+    name: app-peoplety-leaf
+server:
+  port: 8104
+  servlet:
+    context-path: "/"
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://gaozhi.online:8080/eureka/
+  instance:
+    instance-id: peoplety-leaf
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+http:
+  encoding:
+    charset: UTF-8
+    enabled: true
+    force: true
